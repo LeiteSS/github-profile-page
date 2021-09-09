@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, NoSearch } from '../../components';
+import { Layout, NoSearch, Profile } from '../../components';
 import useGithub from '../../hooks/github-hooks';
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
               <p>Loading</p>
             ) : (
               <>
-                Oito
+                <Profile />
               </>
             )}
           </>

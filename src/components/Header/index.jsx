@@ -12,12 +12,19 @@ const Header = () => {
     return getUser(usernameForSearch);
   };
 
+  function handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      getUser(usernameForSearch);
+    }
+  }
+
   return (
     <header>
       <Wrapper>
         <input
           type="text"
           placeholder="Digite o username para pesquisa..."
+          onKeyPress={handleKeyPress}
           onChange={(event) => setUsernameForSearch(event.target.value)}
         />
         <button type="submit" onClick={submitGetUser}>
