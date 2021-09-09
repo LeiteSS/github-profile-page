@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Layout } from '../../components';
-//import useGithub from '../../hooks/github-hooks';
+import { Layout, NoSearch } from '../../components';
+import useGithub from '../../hooks/github-hooks';
 
 const Home = () => {
-    //const { githubState } = useGithub();
-
+    const { githubState } = useGithub();
     return (
-        <Layout />
-    )
-}
-
-export default Home;
+      <Layout>
+        {githubState.hasUser ? (
+          <>
+            {githubState.loading ? (
+              <p>Loading</p>
+            ) : (
+              <>
+                Oito
+              </>
+            )}
+          </>
+        ) : (
+          <NoSearch />
+        )}
+      </Layout>
+    );
+  };
+  
+  export default Home;

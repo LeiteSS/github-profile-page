@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import '@material/react-text-field/dist/text-field.css';
 import '@material/react-material-icon/dist/material-icon.css';
 
-import App from './App';
+import Home from './pages/Home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );
