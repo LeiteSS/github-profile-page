@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, NoSearch, Profile } from '../../components';
+import { Layout, NoSearch, Profile, Repositories } from '../../components';
 import useGithub from '../../hooks/github-hooks';
 
 const Home = () => {
@@ -14,6 +14,7 @@ const Home = () => {
             ) : (
               <>
                 <Profile />
+                <Repositories />
               </>
             )}
           </>
